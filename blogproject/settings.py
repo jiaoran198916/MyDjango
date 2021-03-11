@@ -25,7 +25,7 @@ SECRET_KEY = 'a*l+pv%c&f9ikr6cb!&ay-%3bzb@@t#s!d7%_f*x($+-%#cc&s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.jiaoran.net']
 
 
 # Application definition
