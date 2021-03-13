@@ -7,7 +7,9 @@
         <a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a>
       </li>
     {% empty %}
-      暂无标签！
+      <li>
+        暂无标签！
+      </li>
     {% endfor %}
   </ul>
 </div>

@@ -7,7 +7,9 @@
         <a href="{% url 'blog:category' category.pk %}">{{ category.name }} <span class="post-count">(13)</span></a>
       </li>
     {% empty %}
-      暂无分类！
+      <li>
+        暂无分类！
+      </li>
     {% endfor %}
   </ul>
 </div>
