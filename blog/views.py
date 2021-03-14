@@ -4,12 +4,22 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post, Category, Tag
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
+from django.views.generic import ListView
 # Create your views here.
 from django.http import HttpResponse
 
-def index(request):
-    post_list = Post.objects.all().order_by('-created_time')
-    return render(request, 'blog/index.html', context={'post_list': post_list})
+
+class IndexView(ListView):
+    model = Post
+    template_name = 'blog/index.html'
+    context_object_name = 'post_list'
+    # 指定 paginate_by 属性后开启分页功能，其值代表每一页包含多少篇文章
+    paginate_by = 5
+
+
+# def index(request):
+#     post_list = Post.objects.all().order_by('-created_time')
+#     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 
 def detail(request, pk):
