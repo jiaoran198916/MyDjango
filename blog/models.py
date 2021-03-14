@@ -113,5 +113,7 @@ class Post(models.Model):
         self.views += 1
         self.save(update_fields=['views'])
 
+
+
     def __str__(self):
         return self.title
