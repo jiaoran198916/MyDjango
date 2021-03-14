@@ -5,6 +5,7 @@ from django.urls import reverse
 import markdown
 from django.utils.html import strip_tags
 
+
 # Create your models here.
 
 class Category(models.Model):
